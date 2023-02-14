@@ -6,8 +6,13 @@ Aplicativo abre pelo menu iniciar,
 Help version --verssao do TIC 80
 
 Criando um cartucho --new nomedocartucho.tic
-ESC --entra na editor de codigo
---
+
+ESC      --entra na editor de codigo
+Ctrl + r --liga  o jogo
+Ctrl + s --salva o jogo
+Esc      --entra no menu do jogo
+
+
 -- title:   jogo test
 -- author:  josegamestest
 -- desc:    primeiro teste
