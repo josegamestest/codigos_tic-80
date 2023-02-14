@@ -1,0 +1,46 @@
+Primeiro passo no TIC 80
+Splicativo https://tic80.com/
+Documentação https://tic80.com/learn
+
+Aplicativo abre pelo menu iniciar,
+Help version --verssao do TIC 80
+
+Criando um cartucho --new nomedocartucho.tic
+ESC --entra na editor de codigo
+--
+-- title:   jogo test
+-- author:  josegamestest
+-- desc:    primeiro teste
+-- site:    josegamestest.com.br
+-- license: MIT License (change this to your license of choice)
+-- version: 0.1
+-- script:  lua
+--variavel do contadorde repeticao
+repetidor = 0
+--variavel limite de repeticao
+limite = 100
+--posicao media de largura X
+pos_x = 240 / 2
+--posocao media de altura Y
+pos_y = 0
+--scala maxima do quadrado X
+sca_x = 10
+--scala maxiam do quadrado Y
+sca_y = 10
+-- funcao de repeticao TIC
+function TIC()
+	--limpa 
+ cls()
+ --retangulo
+ rect(pos_x , pos_y ,sca_x,sca_y,3)
+ --laco de repeticao 
+ if repetidor <= limite then
+  --implementacao da variavel
+  repetidor = repetidor + 1
+  --implementacao da posicao
+	 pos_y = pos_y + 0.5
+	 sca_x = sca_x + 0.5
+  --implementacao da escala
+	 sca_y = sca_x
+ end
+end
