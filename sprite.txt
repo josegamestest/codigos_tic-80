@@ -1,0 +1,68 @@
+-- title:   tela_teste
+-- author:  josegamestest
+-- desc:    teste trabalho com tela
+-- site:    josegamestest.com.br
+-- license: MIT License (change this to your license of choice)
+-- version: 0.1
+-- script:  lua
+
+
+--tabela de escala de tela
+game= {
+	w = 240, --width
+	h = 136  --height
+}
+
+--tabela de scala de jogador
+player= {
+--posicao do jogador
+ id    = 0, --identifcador
+ x     = 1, --posx
+	y 			 = 1, --posy
+ color = -1, --cores
+ scal  = 1, --scala
+ flip  = 0, --espelho
+ rot   = 0, --rotacao
+	w= 1, --width
+	h= 1, --height
+}
+
+function TIC()
+
+	cls() --limpar a tela
+	
+spr(
+ player.id,
+ player.x, --pos_x
+ player.y, --pos_y
+ player.color,
+ player.scal,
+ player.flip,
+ player.rot, --	rotate
+ player.w, --tamanhoX
+ player.h --tamanhoy
+)
+	
+	--testa se o botao esta apertado e a posicao do jogador
+	-- no caso do maior e testado o tamanho do jogador com o limite da tela
+	if btn(0) and	player.y > 0 then
+        player.y = player.y -1
+	end
+	
+	if btn(1) and
+        player.y+10<game.h then
+        player.y = player.y +1
+	end
+	
+		if btn(2) and player.x>0 then
+        player.x = player.x -1
+		player.flip=0
+	end
+	
+	if btn(3) and
+        player.x+10<game.w then
+        player.x = player.x +1
+        player.flip=1
+	end
+end
+ 

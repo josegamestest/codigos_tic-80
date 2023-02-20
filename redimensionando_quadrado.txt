@@ -1,0 +1,35 @@
+-- title:   test botoes
+-- author:  josegamestest
+-- desc:    teste botoes
+-- site:    josegamestest.com.br
+-- license: MIT License (change this to your license of choice)
+-- version: 0.1
+-- script:  lua
+
+--[[
+codigo altera escala de um quadrado
+na medida que ele o jogador clica nos
+botoes
+]]
+
+--posicao media de largura X
+pos_x = 240 / 2
+--posocao media de altura Y
+pos_y = 0
+sca_x = 1
+sca_y = 1
+-- funcao de repeticao TIC
+function TIC()
+	--limpa 
+ cls()
+ --retangulo
+ rect(10 ,10 , sca_x, sca_y, 3)
+ 
+-- condicionais escalar retangulo
+ if btn (0) then	sca_y = 1  end
+ if btn (1) then	sca_y = 400 end
+ 
+ if btn (2) then sca_x = 1  end
+ if btn (3) then sca_x = 600 end
+ 
+end

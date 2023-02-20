@@ -1,0 +1,31 @@
+-- title:   test_botoes_move
+-- author:  josegamestest
+-- desc:    teste mover um caixa
+-- site:    josegamestest.com.br
+-- license: MIT License (change this to your license of choice)
+-- version: 0.1
+-- script:  lua
+--[[
+codigo altera escala de um quadrado
+na medida que ele o jogador clica nos
+botoes
+]]
+
+--posicao media de largura X
+pos_x = 240 / 2
+--posocao media de altura Y
+pos_y = 0
+sca_x = 10
+sca_y = 10
+-- funcao de repeticao TIC
+function TIC()
+	--limpa 
+ cls()
+ --retangulo
+ rect(pos_x,pos_y , sca_x, sca_y, 3)
+-- condicionais escalar retangulo
+ if btn (0) then	pos_y=pos_y-1 end	-- Cima
+ if btn (1) then	pos_y=pos_y+1 end -- baixo
+ if btn (2) then pos_x=pos_x-1 end -- Direita
+ if btn (3) then pos_x=pos_x+1 end -- Esquerda
+end
